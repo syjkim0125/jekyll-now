@@ -33,7 +33,6 @@ schema
 column_name   data_type
 -------------------------
 emp_no        varchar(20)
-
 emp_nm        varchar(20)
 -------------------------
 
@@ -42,7 +41,6 @@ table
 emp_no        emp_nm
 -------------------------
 AA00001       Tora
-
 1200002       James
 -------------------------
 
