@@ -85,4 +85,4 @@ exclude:
   - README.md
   - CNAME
 # paging
-paginate: 1
+paginate: 5
