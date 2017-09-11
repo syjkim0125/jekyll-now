@@ -38,33 +38,31 @@ layout: default
     {% endfor %}
   </ul>
 
-  <!-- Pagination links -->
-  <ul class="pagination clearfix">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-      <li><a href="/">Prev</a></li>
+<!-- Pagination Links -->
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
       {% else %}
-      <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
+        <span>&laquo; Prev</span>
       {% endif %}
-    {% else %}
-    <li><span class="disabled">Prev</span></li>
-    {% endif %}
-    {% if paginator.page == 1 %}
-    <li><span class="active">1</span></li>
-    {% else %}
-    <li><a href="/">1</a></li>
-    {% endif %}
-    {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-      <li><span class="active">{{ count }}</span></li>
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <em>{{ page }}</em>
+
+        <!-- 1번 링크는 루트 링크로 설정 -->
+        {% elsif page == 1 %} 
+          <a href="/">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
       {% else %}
-      <li><a href="/page{{ count }}">{{ count }}</a></li>
+        <span>Next &raquo;</span>
       {% endif %}
-    {% endfor %}
-    {% if paginator.next_page %}
-    <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-    {% else %}
-    <li><span class="disabled">Next</span></li>
-    {% endif %}
-  </ul>
-</section>>
+    </div>
+  {% endif %}
