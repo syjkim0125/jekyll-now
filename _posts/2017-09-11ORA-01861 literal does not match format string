@@ -1,0 +1,44 @@
+------------------------------------------------
+# ORA-01861 literal does not match format string
+------------------------------------------------
+
+If you faces this error, Check out the following.
+
+
+
+1. To store a string (String type) in a NUMBER type column
+
+2. To store a string (String type) in a DATE type column
+
+3. check your Date form
+
+
+Ex1)
+
+schema
+
+column_name     || data_type
+----------------------------
+id              || varchar2
+last_login_date || Date
+----------------------------
+
+
+UPDATE LOGIN_TABLE
+SET LAST_LOGIN_DATE = #login_date#
+WHERE ID = #id#
+
+-> ERROR!! Cast type
+
+UPDATE LOGIN_TABLE
+SET LAST_LOGIN_DATE = TO_DATE(#login_date#, ‘YYYYMMDDHH24MISS’)
+WHERE ID = #id#
+
+
+Ex2)
+
+select  TO_CHAR(TO_DATE(?),'YYYYMMDD') from dual;  //ERROR!!
+
+--> Change
+
+select  TO_CHAR(TO_DATE(?,'YYYYMMDD'),'YYYYMMDD') from dual;  //Good!
