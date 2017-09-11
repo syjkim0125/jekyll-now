@@ -31,18 +31,18 @@ Ex4)
 schema
 
 column_name   data_type
-<ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ>
+'''
 emp_no        varchar(20)
 emp_nm        varchar(20)
-<ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ>
+'''
 
 table
 
 emp_no        emp_nm
-<ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ>
+'''
 AA00001       Tora
 1200002       James
-<ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ>
+'''
 
 select *
 from emp
