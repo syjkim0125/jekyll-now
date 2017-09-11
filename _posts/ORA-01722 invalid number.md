@@ -17,14 +17,23 @@ if you faces this error, check this 4 cases.
 
 
 
-Ex1) user_id = 'user_id'
+Ex1) 
+```
+user_id = 'user_id'
 -> user_id = '123'
+```
 
-Ex2) <> 1
+Ex2) 
+```
+<> 1
 -> <> '1'
+```
 
-Ex3) '"+id+"'
+Ex3) 
+```
+'"+id+"'
 -> '1122'
+```
 * you must change next all thing : <"+...+">
 
 Ex4) 
@@ -45,19 +54,24 @@ AA00001       Tora
 1200002       James
 ```
 
+```
 select *
 from emp
 where substr(emp_no, 1, 2) = 12;
-
+```
 --> ERROR!! - data type is not matched. -> the left side is varchar, the right side is int.
 --> Fix it 2 cases.
 
 1)
+```
 select *
 from emp
 where substr(emp_no, 1, 2) = ’12';
+```
 
 2)
+```
 select *
 from emp
 where substr(emp_no, 1, 2) = to_char(12);
+```
