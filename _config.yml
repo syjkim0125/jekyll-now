@@ -85,5 +85,6 @@ exclude:
   - README.md
   - CNAME
 # paging
-paginate: 1
+paginate: 5
+per_page: 1
 paginate_path: "/blog/page:num/"
