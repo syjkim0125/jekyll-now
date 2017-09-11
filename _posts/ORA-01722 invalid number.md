@@ -29,7 +29,7 @@ Ex3) '"+id+"'
 
 Ex4) 
 
-**schema
+# schema
 ```
 column_name   data_type
 
@@ -37,7 +37,7 @@ emp_no        varchar(20)
 emp_nm        varchar(20)
 ```
 
-**table
+# table
 ```
 emp_no        emp_nm
 
