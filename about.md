@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Developers who want to be a Data Engineer
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+If you want to more Info about me. follow this url : https://github.com/syjkim0125/
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[syjkim0125@gmail.com](mailto:email@domain.com)
