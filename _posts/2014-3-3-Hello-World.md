@@ -1,10 +1,77 @@
 ---
 layout: post
-title: You're up and running!
+title: ORA-01722 invalid number
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+--------------------------
+# ORA-01722 invalid number
+--------------------------
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+if you faces this error, check this 4 cases.
+
+1. you put the invalid parameter.
+2. miss the quotation marks.
+3. When passing values from java, Without clearing the "+...+"
+4. put wrong type.
+
+
+
+Ex1) 
+```
+user_id = 'user_id'
+-> user_id = '123'
+```
+
+Ex2) 
+```
+<> 1
+-> <> '1'
+```
+
+Ex3) 
+```
+'"+id+"'
+-> '1122'
+```
+* you must change next all thing : <"+...+">
+
+Ex4) 
+
+# schema
+```
+column_name   data_type
+
+emp_no        varchar(20)
+emp_nm        varchar(20)
+```
+
+# table
+```
+emp_no        emp_nm
+
+AA00001       Tora
+1200002       James
+```
+
+```
+select *
+from emp
+where substr(emp_no, 1, 2) = 12;
+```
+--> ERROR!! - data type is not matched. -> the left side is varchar, the right side is int.
+--> Fix it 2 cases.
+
+1)
+```
+select *
+from emp
+where substr(emp_no, 1, 2) = ’12';
+```
+
+2)
+```
+select *
+from emp
+where substr(emp_no, 1, 2) = to_char(12);
+```
