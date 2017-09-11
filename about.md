@@ -12,4 +12,4 @@ If you want to more Info about me. follow this url : https://github.com/syjkim01
 
 ### Contact me
 
-[syjkim0125@gmail.com](mailto:email@domain.com)
+[syjkim0125@gmail.com](mailto:syjkim0125@gmail.com)
