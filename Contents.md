@@ -4,7 +4,7 @@ title: Contents
 permalink: /contents/
 ---
 
-Developers who want to be a Data Engineer
+Display Contents
 
 ### More Information
 
