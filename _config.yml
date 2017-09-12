@@ -88,3 +88,4 @@ exclude:
 paginate: 3
 paginator.posts: 1
 paginate_path: "/blog/page:num/"
+paginator.per_page: 1
