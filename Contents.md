@@ -6,10 +6,4 @@ permalink: /contents/
 
 ### Display Contents
 
-
-{% for post in paginator.posts%}
-   <article class="post">
-     <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-   </article>
-{% endfor %}
+[https://syjkim0125.github.io/blog/page3/](1. Oracle Debugging)
