@@ -87,6 +87,5 @@ exclude:
 
 #paging
 
-paginate: 5
+paginate: 3
 paginate_path: "/blog/page:num/"
-paginate.per_page: 3
