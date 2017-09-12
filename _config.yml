@@ -89,3 +89,4 @@ exclude:
 
 paginate: 3
 paginate_path: "/blog/page:num/"
+paginate.per_page: 3
