@@ -4,12 +4,6 @@ title: Contents
 permalink: /contents/
 ---
 
-Display Contents
+### Display Contents
 
-### More Information
-
-bebe
-
-### Contact me
-
-bebe
+ <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
