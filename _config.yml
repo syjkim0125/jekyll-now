@@ -86,6 +86,6 @@ exclude:
   - CNAME
 # paging
 paginate: 3
-paginator.posts: 1
+paginator.posts: 3
 paginate_path: "/blog/page:num/"
 paginator.per_page: 1
