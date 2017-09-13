@@ -1,0 +1,38 @@
+---
+layout: post
+title: 8. ORA-00942 table or view does not exist
+---
+
+
+if you faces this error, check this 4 cases.
+
+1. Database not connected.
+2. Table not authorized.
+3. Spelling error or indeed table does not exist.
+4. Naming the owner in front of the table and SELECT.
+
+
+
+Ex1) 
+```
+- Reconnect to the database.
+```
+
+Ex2) 
+```
+- Ask your DBA for permission.
+```
+
+Ex3) 
+```
+- SELECT * FROM TABEL;
+-> SELECT * FROM TABLE;
+```
+
+Ex4) 
+```
+- SELECT * FROM owner.TABLE
+```
+
+
+
