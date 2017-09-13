@@ -11,3 +11,5 @@ Tora's Programming blog.
 - AWS
 
 - Python
+
+[Tora's Blog](https://syjkim0125.github.io)
