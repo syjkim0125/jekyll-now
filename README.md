@@ -12,4 +12,4 @@ Tora's Programming blog.
 
 - Python
 
-[Tora's Blog](https://syjkim0125.github.io)
+-> Come here [Tora's Blog](https://syjkim0125.github.io)
