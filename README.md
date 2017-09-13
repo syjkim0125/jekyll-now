@@ -8,6 +8,6 @@ Tora's Programming blog.
 
 - GCP
 
-- AI
+- AWS
 
 - Python
